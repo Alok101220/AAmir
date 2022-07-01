@@ -56,7 +56,7 @@ class _BottomContainerState extends State<BottomContainer> {
                     children: [
                       Text("\" ${element.text} \"",
                               style: TextStyle(
-                                  color: MyTheme.creamColor,
+                                  color: context.accentColor,
                                   fontSize: 15,
                                   letterSpacing: 3,
                                   wordSpacing: 5))

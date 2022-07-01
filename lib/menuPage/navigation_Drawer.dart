@@ -21,7 +21,7 @@ class _NavigationClassState extends State<NavigationClass> {
             DrawerHeader(
               padding: EdgeInsets.all(0),
               child: UserAccountsDrawerHeader(
-                accountName: "Username".text.make().px16(),
+                accountName: "Username".text.color(context.accentColor).make().px16(),
                 accountEmail: null,
                 decoration: BoxDecoration(color: context.cardColor),
                 margin: EdgeInsets.all(0),
