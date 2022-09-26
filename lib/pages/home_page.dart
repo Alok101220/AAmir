@@ -40,7 +40,6 @@ class _HomePageState extends State<HomePage> {
         // ignore: unnecessary_this
         .map<Item>((item) => Item.fromMap(item))
         .toList();
-    setState(() {});
   }
 
   @override
@@ -51,11 +50,12 @@ class _HomePageState extends State<HomePage> {
       backgroundColor: context.canvasColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
+        // ignore: deprecated_member_use
+        backgroundColor: context.theme.buttonColor,
         child: Icon(
           CupertinoIcons.cart,
           color: Colors.white,
         ),
-        backgroundColor: context.theme.buttonColor,
       ).badge(color: Vx.red500, size: 20, count: _cart.items.length),
       body: NestedScrollView(
         floatHeaderSlivers: true,

@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter__catalog/Auth/signInScreesn.dart';
 import 'package:flutter__catalog/core/store.dart';
 import 'package:flutter__catalog/pages/cart_page.dart';
 import 'package:flutter__catalog/pages/home_page.dart';
-import 'package:flutter__catalog/pages/login_page.dart';
 import 'package:flutter__catalog/pages/sliver_App_Bar.dart';
 import 'package:flutter__catalog/pages/splashScreen.dart';
 import 'package:flutter__catalog/utils/routes.dart';
 import 'package:flutter__catalog/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(VxState(
       store: MyStore(),
       // ignore: prefer_const_constructors
@@ -29,12 +33,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.splashRout,
       routes: {
-        "/":(context)=>LoginPage(),
-        MyRoutes.homeRoute:(context) => HomePage(),
-        MyRoutes.loginRoute:(context) => LoginPage(),
-        MyRoutes.cartRoute:(context)=>CartPage(),
-        MyRoutes.splashRout:(context)=>MyHomePage(),
-        MyRoutes.sliverRoute:(context)=>SliverBar()
+        // "/": (context) => LoginPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => SignInScreen(),
+        MyRoutes.cartRoute: (context) => CartPage(),
+        MyRoutes.splashRout: (context) => MyHomePage(),
+        MyRoutes.sliverRoute: (context) => SliverBar(),
+        // MyRoutes.registerRoute:(context) => RegisterPage(toggleView: null,)
       },
     );
   }

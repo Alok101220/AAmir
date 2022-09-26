@@ -1,17 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'dart:async';
-import 'dart:convert';
 import 'dart:core';
-import 'dart:io';
 
-import 'package:flutter__catalog/models/status.dart';
-import 'package:flutter__catalog/widgets/home_widgets/image_Slider.dart';
-import 'package:flutter__catalog/widgets/home_widgets/statuspage.dart';
-import 'package:flutter__catalog/widgets/themes.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter__catalog/Auth/page.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter__catalog/pages/home_page.dart';
 
 
 import 'package:velocity_x/velocity_x.dart';
@@ -35,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
     Timer(
         Duration(seconds: 5),
         () => Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => HomePage())));
+            context, MaterialPageRoute(builder: (context) => PageHome())));
   }
 
   @override
@@ -58,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
               duration: Duration(seconds: 1),
               tween: IntTween(begin: 0, end: string.length),
             ),
-            BottomContainer(),
           ]),
         ));
   }

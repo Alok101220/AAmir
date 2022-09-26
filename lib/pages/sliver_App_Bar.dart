@@ -1,11 +1,15 @@
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
-import 'package:flutter__catalog/pages/login_page.dart';
+// import 'package:flutter__catalog/pages/login_page.dart';
+// ignore: unused_import
 import 'package:flutter__catalog/pages/splashScreen.dart';
 import 'package:flutter__catalog/widgets/home_widgets/catalog_header.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class SliverBar extends StatefulWidget {
+  const SliverBar({super.key});
+
   @override
   State<SliverBar> createState() => _SliverBarState();
 }

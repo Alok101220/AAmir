@@ -27,6 +27,7 @@ class _ImageSliderState extends State<ImageSlider> {
             enlargeCenterPage: true,
             height: 150,
             autoPlay: true,
+            // ignore: prefer_const_constructors
             autoPlayInterval: Duration(seconds: 3),
             reverse: false,
             aspectRatio: 5.0,

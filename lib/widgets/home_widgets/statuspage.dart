@@ -52,7 +52,8 @@ class _BottomContainerState extends State<BottomContainer> {
                 final element = _list[index];
                 return InkWell(
                     child: Center(
-                  child: Column(
+                      
+                  child: Column( 
                     children: [
                       Text("\" ${element.text} \"",
                               style: TextStyle(
